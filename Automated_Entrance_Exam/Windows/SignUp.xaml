@@ -1,0 +1,42 @@
+﻿<Controls:MetroWindow x:Class="Automated_Entrance_Exam.Windows.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"             
+        
+        xmlns:local="clr-namespace:Automated_Entrance_Exam.Windows"
+        mc:Ignorable="d"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        
+        Title="Sign Up" Height="600" Width="800"  WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".20*" />
+            <RowDefinition Height=".70*" />
+            <RowDefinition Height=".10*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Teal">
+            <Viewbox Margin="10">
+                <TextBlock Foreground="White" Text="Sign Up" />
+            </Viewbox>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Frame x:Name="f_SignUp" NavigationUIVisibility="Hidden" />
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="5">
+            <Button x:Name="btn_Next" Width="150" Height="Auto" FontSize="20" Content="Next" Click="btn_Next_Click" />
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
